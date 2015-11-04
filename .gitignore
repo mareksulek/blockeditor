@@ -1,0 +1,6 @@
+/.project
+_build
+_qbuild
+-build
+_install
+CMakeLists.txt.user
