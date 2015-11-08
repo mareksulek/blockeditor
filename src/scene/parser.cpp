@@ -218,11 +218,8 @@ void Parser::loadGrammar()
 
 Layout *Parser::parse(QString text) {
     _retree = NULL;
-    qDebug() << "--- text \/ \/ \/";
-    qDebug() << text;
     qDebug() << "Request text reparse...";
     _state["parseTextNew"]( text.toStdString().c_str());
-      qDebug() << "after lua call";
     qDebug() << "... parsing DONE";
     return _retree;
 }

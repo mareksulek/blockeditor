@@ -68,7 +68,7 @@ bool SceneEventObserver::sceneEventFilter ( QGraphicsItem * watched, QEvent *eve
     }
 
     else if (event->type() == QEvent::KeyPress) {
-        qDebug() << "SEFO KEY press EVENT " << event;
+        qDebug() << "SEFO KEY press EVENT";
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
         command = keyCommand( watched, keyEvent);
     }

@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     MainWindow window;
 
     window.show();
-    window.openFile("examples_scripts/echo_2.lua");
+    window.openFile("examples_scripts/echo.lua");
     //window.openFile("examples_scripts/big.lua");
 
 

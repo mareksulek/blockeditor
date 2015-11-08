@@ -30,7 +30,7 @@ public:
 
     Layout *root() const;
     void  setRoot(Layout *root);
-    QString getText();
+
 
 private:
     static BlockScene *inst;
