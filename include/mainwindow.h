@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <minimapview.h>
 
 class BlockScene;
 class QGraphicsView;
@@ -9,6 +10,7 @@ class QTextEdit;
 class QGraphicsScene;
 class LineNumberArea;
 class Parser;
+class MiniMapView;
 
 class MainWindow : public QMainWindow
 {
@@ -32,6 +34,7 @@ private:
     void createMenus();
     void createToolbars();
 
+    MiniMapView *minimap;
     QTextEdit *textEdit;
     BlockScene *scene;
     QGraphicsView *view;

@@ -27,7 +27,7 @@ public:
     SceneState *getSceneState() const { return _sceneState;}
     void addCommand(Command *command);
     void addNewRoot(Layout *root);
-
+    Layout *_root;
     Layout *root() const;
     void  setRoot(Layout *root);
 
@@ -39,7 +39,6 @@ private:
 
     QGraphicsLinearLayout *_vLayout;
     QGraphicsWidget *_form;
-    Layout *_root;
     SceneEventObserver *_eventFilter;
     Reparser *_reparser;
     SceneState *_sceneState;

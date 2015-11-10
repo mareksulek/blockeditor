@@ -35,10 +35,13 @@ MainWindow::MainWindow()
     scene = BlockScene::instance(view);
     view->setScene(scene);
     view->showMaximized();
-
+    minimap = new MiniMapView();
+    minimap->setScene(scene);
     QHBoxLayout *layout = new QHBoxLayout;
     layout->addWidget(view);
     //layout->addWidget(lineEditor);
+    layout->addWidget(minimap);
+    minimap->setFixedWidth(120);
     QWidget *widget = new QWidget;
     widget->setLayout(layout);
     setCentralWidget(widget);
@@ -57,7 +60,7 @@ MainWindow::MainWindow()
 //                      scene, &BlockScene::updateTreeNeighbors);
 
     //setGeometry(100, 100, 500, 400);
-    scene->setSceneRect(0, 0, 570, 480);
+    scene->setSceneRect(0, 0, 500, 480);
 }
 
 void MainWindow::createMenus()
